@@ -41,4 +41,4 @@ function roots_scripts() {
   wp_enqueue_script('roots_main');
 }
 
-add_action('wp_enqueue_scripts', 'roots_scripts', 100);
+add_action('wp_enqueue_scripts', 'roots_scripts', 100);```
