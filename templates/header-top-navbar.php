@@ -1,3 +1,4 @@
+<div class="container">
 <header id="banner" class="navbar" role="banner">
   <?php roots_header_inside(); ?>
   <div class="navbar-inner">
@@ -16,3 +17,4 @@
     </div>
   </div>
 </header>
+</div> <!-- container -->
