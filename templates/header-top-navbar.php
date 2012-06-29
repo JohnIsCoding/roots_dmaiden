@@ -1,4 +1,4 @@
-<header id="banner" class="navbar navbar-fixed-top" role="banner">
+<header id="banner" class="navbar" role="banner">
   <?php roots_header_inside(); ?>
   <div class="navbar-inner">
     <div class="<?php echo WRAP_CLASSES; ?>">
