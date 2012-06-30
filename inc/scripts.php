@@ -12,6 +12,9 @@ function roots_scripts() {
 
 
   wp_enqueue_style('roots_app_style', 'wp/wp-content/themes/roots_dmaiden/css/app.css', false, null);
+  wp_enqueue_style('roots_app_style', 'wp/wp-content/themes/roots_dmaiden/css/fonts.css', false, null);
+
+
 
   if (is_child_theme()) {
     wp_enqueue_style('roots_child_style', get_stylesheet_uri());
