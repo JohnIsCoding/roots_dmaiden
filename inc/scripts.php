@@ -26,8 +26,8 @@ function roots_scripts() {
     wp_enqueue_script('comment-reply');
   }
 
-  wp_register_script('roots_plugins', '/js/plugins.js', false, null, false);
-  wp_register_script('roots_main', '/js/main.js', false, null, false);
+  wp_register_script('roots_plugins', 'wp/wp-content/themes/roots_dmaiden/js/plugins.js', false, null, false);
+  wp_register_script('roots_main', 'wp/wp-content/themes/roots_dmaiden/js/main.js', false, null, false);
   wp_enqueue_script('roots_plugins');
   wp_enqueue_script('roots_main');
 }
