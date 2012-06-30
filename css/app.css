@@ -50,6 +50,7 @@ a.brand{
 
 .navbar .nav > li > a {
   float: none;
+  font-family: 'SortsMillGoudyRegular';
   padding: 9px 10px 11px;
   line-height: 19px;
   color: #999999;
