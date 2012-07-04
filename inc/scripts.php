@@ -1,18 +1,18 @@
 <?php
 
 function roots_scripts() {
-  wp_enqueue_style('roots_bootstrap_style', 'wp/wp-content/themes/roots_dmaiden/css/bootstrap.css', false, null);
+  wp_enqueue_style('roots_bootstrap_style', '/wp-content/themes/roots_dmaiden/css/bootstrap.css', false, null);
 
   if (current_theme_supports('bootstrap-responsive')) {
-    wp_enqueue_style('roots_bootstrap_responsive_style', 'wp/wp-content/themes/roots_dmaiden/css/bootstrap-responsive.css', array('roots_bootstrap_style'), null);
+    wp_enqueue_style('roots_bootstrap_responsive_style', '/wp-content/themes/roots_dmaiden/css/bootstrap-responsive.css', array('roots_bootstrap_style'), null);
   }
 
   // If you're not using Bootstrap, include H5BP's main.css:
   // wp_enqueue_style('roots_style', '/css/main.css', false, null);
 
 
-  wp_enqueue_style('roots_app_style', 'wp/wp-content/themes/roots_dmaiden/css/app.css', false, null);
-  wp_enqueue_style('roots_font_style', 'wp/wp-content/themes/roots_dmaiden/css/fonts.css', false, null);
+  wp_enqueue_style('roots_app_style', '/wp-content/themes/roots_dmaiden/css/app.css', false, null);
+  wp_enqueue_style('roots_font_style', '/wp-content/themes/roots_dmaiden/css/fonts.css', false, null);
 
 
 
@@ -29,8 +29,8 @@ function roots_scripts() {
     wp_enqueue_script('comment-reply');
   }
 
-  wp_register_script('roots_plugins', 'wp/wp-content/themes/roots_dmaiden/js/plugins.js', false, null, false);
-  wp_register_script('roots_main', 'wp/wp-content/themes/roots_dmaiden/js/main.js', false, null, false);
+  wp_register_script('roots_plugins', '/wp-content/themes/roots_dmaiden/js/plugins.js', false, null, false);
+  wp_register_script('roots_main', '/wp-content/themes/roots_dmaiden/js/main.js', false, null, false);
   wp_enqueue_script('roots_plugins');
   wp_enqueue_script('roots_main');
 }
