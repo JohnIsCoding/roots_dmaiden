@@ -83,5 +83,9 @@ add_action( 'init', 'register_cpt_gallery' );
     register_post_type( 'gallery', $args );
     } 
     
-
+   
+   
+    if ( function_exists( 'add_image_size' ) ) { 
+	add_image_size( 'thumbnail-small', 60, 60, true ); //(cropped)
+}
 
