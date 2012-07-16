@@ -169,3 +169,45 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    /*  padding-top: 0; */
   }
 }
+
+
+
+/* =============================================================================
+	Slideshow
+   ========================================================================== */
+
+
+/*
+	#slides{
+height: 420px;
+overflow: hidden;
+width: 420px;
+
+}
+*/
+
+.slides_pagination {
+  height: 48px;
+/*   margin: 24px 0; */
+}
+.slides_pagination ul {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+
+  *zoom: 1;
+  margin-left: 0;
+  margin-bottom: 0;
+  }
+.slides_pagination li {
+  display: inline;
+}
+.slides_pagination a {
+  float: left;
+  line-height: 46px;
+  text-decoration: none;
+/*   border: 1px solid #ddd; */
+/*   border-left-width: 0; */
+}
+
+
