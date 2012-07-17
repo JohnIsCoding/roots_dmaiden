@@ -3,6 +3,8 @@
   <?php roots_post_before(); ?>
     <?php roots_post_inside_before(); ?>
        
+ 
+       
       <?php the_content(); ?>
       <?php wp_link_pages(array('before' => '<nav class="pagination">', 'after' => '</nav>')); ?>
     <?php roots_post_inside_after(); ?>

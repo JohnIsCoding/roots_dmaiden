@@ -12,7 +12,7 @@
 
   <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/modernizr-2.5.3.min.js"></script>
 
-  <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/slides.jquery.js"></script>
+
 
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -20,6 +20,39 @@
 
   <?php roots_head(); ?>
   <?php wp_head(); ?>
+
+ <style type="text/css" media="screen">
+            .slides_container {
+               height: 600px;
+            }
+            .slides_container div {
+                display:block;
+            }
+        </style>
+    
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/slides.jquery.js"></script>
+    
+        <script>
+       
+     
+            	$(function(){
+			$('#slides').slides({
+				preload: true,
+				preloadImage: 'img/loading.gif',
+				effect: 'fade',
+				crossfade: false,
+				slideSpeed: 350,
+				fadeSpeed: 400,
+				generateNextPrev: false,
+				generatePagination: false
+			});
+		});
+            
+            
+            
+        </script>
+
 
 </head>
 
