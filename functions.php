@@ -64,7 +64,7 @@ add_action( 'init', 'register_cpt_gallery' );
     $args = array(
     'labels' => $labels,
     'hierarchical' => false,
-    'description' => 'Exhibits here will be displayed in the Gallery. ',
+    'description' => 'Exhibits here will be displayed in the Gallery. Remember to set a "Featured Image". ',
     'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'post-formats' ),
     'taxonomies' => array( 'category', 'post_tag' ),
     'public' => true,

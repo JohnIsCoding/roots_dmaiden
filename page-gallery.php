@@ -23,7 +23,13 @@ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full'
             <div class="slides_container span6">
                
                
-                <div>
+               
+                   <?php roots_loop_before(); ?>
+        <?php get_template_part('loop', 'gallery-exhibit'); ?>
+        <?php roots_loop_after(); ?>
+               
+                <!--
+<div>
                     <img src="http://placehold.it/570x570/0064cd/fff" alt="one" />
                 </div>
                 <div>
@@ -35,14 +41,23 @@ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full'
                     <div>
                     <img src="http://placehold.it/570x570/46a546/fff" alt="four" />
                 </div>
+-->
             </div> <!-- .slides_container -->
        
         <div class="span5 offset1">
         <ul class="slides_pagination">
-        			<li><a href="#"><img src="http://placehold.it/70/0064cd/fff" width="70" alt="one"></a></li>
+        			<!--
+<li><a href="#"><img src="http://placehold.it/70/0064cd/fff" width="70" alt="one"></a></li>
 					<li><a href="#"><img src="http://placehold.it/70/c3325f/fff" width="70" alt="two"></a></li>
 					<li><a href="#"><img src="http://placehold.it/70/ffc40d/fff" width="70" alt="three"></a></li>
 					<li><a href="#"><img src="http://placehold.it/70/46a546/fff" width="70" alt="four"></a></li>
+-->
+
+      <?php roots_loop_before(); ?>
+        <?php get_template_part('loop', 'gallery-thumbs'); ?>
+        <?php roots_loop_after(); ?>
+
+
 
         </ul>
        </div> <!-- .pagination -->
