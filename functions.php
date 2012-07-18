@@ -44,6 +44,7 @@ add_action('after_setup_theme', 'roots_setup');
 
 
 
+/*
 //register a new post type
 add_action( 'init', 'register_cpt_gallery' );
     function register_cpt_gallery() {
@@ -82,6 +83,7 @@ add_action( 'init', 'register_cpt_gallery' );
     );
     register_post_type( 'gallery', $args );
     } 
+*/
     
    
    
