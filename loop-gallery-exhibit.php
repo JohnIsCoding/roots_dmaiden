@@ -1,6 +1,6 @@
 <?php /* Start loop */ ?>
 
-             <?php query_posts( array( 'post_type' => 'gallery' )); ?>
+             <?php // query_posts( array( 'post_type' => 'gallery' )); ?>
 
 
 <?php while (have_posts()) : the_post(); ?>

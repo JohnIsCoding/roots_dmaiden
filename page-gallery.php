@@ -8,13 +8,13 @@ get_header(); ?>
     
     
        
-       
-                        <?php 
-if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full', false );
-} 
-?>
-       
+   
+   <?php /* Start loop */ ?>
+
+<?php while (have_posts()) : the_post(); ?>
+
+
+<?php 		$images = get_field('gallery_entries');  if( $images ): ?>
    
 
         <div id="slides">
@@ -22,40 +22,31 @@ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full'
             
             <div class="slides_container span6">
                
-               
-               
-                   <?php roots_loop_before(); ?>
-        <?php get_template_part('loop', 'gallery-exhibit'); ?>
-        <?php roots_loop_after(); ?>
-               
-                <!--
-<div>
-                    <img src="http://placehold.it/570x570/0064cd/fff" alt="one" />
-                </div>
-                <div>
-                    <img src="http://placehold.it/570x570/c3325f/fff" alt="two" />
-                </div>
-                <div>
-                    <img src="http://placehold.it/570x570/ffc40d/fff" alt="three" />
-                </div>
-                    <div>
-                    <img src="http://placehold.it/570x570/46a546/fff" alt="four" />
-                </div>
--->
+
+            <?php foreach( $images as $image ): ?>
+             
+                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>" />
+                    
+                
+            <?php endforeach; ?>
+  
+            
             </div> <!-- .slides_container -->
        
         <div class="span5 offset1">
         <ul class="slides_pagination">
-        			<!--
-<li><a href="#"><img src="http://placehold.it/70/0064cd/fff" width="70" alt="one"></a></li>
-					<li><a href="#"><img src="http://placehold.it/70/c3325f/fff" width="70" alt="two"></a></li>
-					<li><a href="#"><img src="http://placehold.it/70/ffc40d/fff" width="70" alt="three"></a></li>
-					<li><a href="#"><img src="http://placehold.it/70/46a546/fff" width="70" alt="four"></a></li>
--->
 
-      <?php roots_loop_before(); ?>
-        <?php get_template_part('loop', 'gallery-thumbs'); ?>
-        <?php roots_loop_after(); ?>
+    <?php //The following code creates the thumbnail navigation ?>
+    
+  
+            <?php foreach( $images as $image ): ?>
+                <li>
+                    <a href="#"><img src="<?php echo $image['sizes']['thumbnail-small']; ?>" alt="<?php echo $image['title']; ?>" /></a>
+                </li>
+            <?php endforeach; ?>
+
+
+
 
 
 
@@ -64,6 +55,13 @@ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full'
        
        
         </div> <!-- #slides -->
+ 
+ 
+ <?php endif; 
+ 
+?>
+
+<?php endwhile; /* End loop */ ?>
  
 
     </div><!-- /#content -->

@@ -1,34 +1,43 @@
 <?php /* Start loop */ ?>
 
-             <?php query_posts( array( 'post_type' => 'gallery' )); ?>
-
+             <?php //query_posts( array( 'post_type' => 'gallery' )); ?>
 
 <?php while (have_posts()) : the_post(); ?>
-  <?php roots_post_before(); ?>
-    <?php roots_post_inside_before(); ?>
-
-<?php 
- if ( has_post_thumbnail()) {
-   $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large');
-/*    echo '<li><a href="' . $large_image_url[0] . '" title="' . the_title_attribute('echo=0') . '" >'; */
-
-    echo '<li><a href="#" alt="' . the_title_attribute('echo=0') . '" title="' . the_title_attribute('echo=0') . '" >'; 
 
 
-$attr_args = array(
-			
-			'class'	=> "gallery-thumb",
-			'alt'	=> trim(strip_tags( $post->post_title )),
-			'title'	=> trim(strip_tags( $post->post_title )),
-		);
+<?php
 
-
-   echo get_the_post_thumbnail($post->ID, 'thumbnail-small', $attr_args); 
-   echo '</a></li>';
- }
+$images = get_field('gallery_entries');
+ 
+if( $images ): ?>
+    <div id="slider" class="flexslider">
+        <ul class="slides">
+            <?php foreach( $images as $image ): ?>
+                <li>
+                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <p class="flex-caption"><?php echo $image['caption']; ?></p>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+    <?php
+ 
+    /*
+    *  The following code creates the thumbnail navigation
+    */
+ 
+    ?>
+    <div id="carousel" class="flexslider">
+        <ul class="slides">
+            <?php foreach( $images as $image ): ?>
+                <li>
+                    <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+<?php endif; 
+ 
 ?>
 
-
-    <?php roots_post_inside_after(); ?>
-  <?php roots_post_after(); ?>
 <?php endwhile; /* End loop */ ?>
