@@ -24,10 +24,10 @@ get_header(); ?>
                
 
             <?php foreach( $images as $image ): ?>
-             
+             <div class="slide">
                     <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>" />
-                    
-                
+                    <div class="caption"><?php echo $image['title']; ?></div>
+                </div>
             <?php endforeach; ?>
   
             
