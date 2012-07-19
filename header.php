@@ -42,8 +42,8 @@
 				preloadImage: 'img/loading.gif',
 				effect: 'fade',
 				crossfade: false,
-				slideSpeed: 350,
-				fadeSpeed: 400,
+				slideSpeed: 550,
+				fadeSpeed: 600,
 				generateNextPrev: false,
 				generatePagination: false
 			});
