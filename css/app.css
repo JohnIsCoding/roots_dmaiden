@@ -79,11 +79,17 @@ text-transform: uppercase;
 
 
 
+
+
 /* =============================================================================
    Primary Content
    ========================================================================== */
 
-#main { }
+#main { 
+	
+	margin-top: 80px;
+	
+}
 
 
 
@@ -212,4 +218,30 @@ width: 420px;
 /*   border-left-width: 0; */
 }
 
+
+.caption{
+margin-top: 80px;
+
+}
+
+.caption p{
+	
+	font-family: "SortsMillGoudyRegular-LN";
+	font-size: 90%;
+}
+
+
+#pagination_container{
+/* margin-left: 650px; */
+z-index: 100;
+margin-top: 150px;
+	position: absolute;
+	float: right;
+	
+}
+
+.current_image img{
+
+box-shadow: 0px 0px 3px rgba(0,0,0,0.5);	
+}
 
