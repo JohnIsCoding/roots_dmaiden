@@ -2,18 +2,14 @@
   <?php roots_content_before(); ?>
     <div id="content" class="<?php echo CONTAINER_CLASSES; ?>">
     <?php roots_main_before(); ?>
-      <div id="main" class="<?php echo MAIN_CLASSES; ?>" role="main">
+      <div id="main_home" class="span12 home_image" role="main">
         <?php roots_loop_before(); ?>
-        <?php get_template_part('loop', 'page'); ?>
+        <?php get_template_part('loop', 'page-container-only'); ?>
         <?php roots_loop_after(); ?>
       </div><!-- /#main -->
-    <?php roots_main_after(); ?>
-    <?php roots_sidebar_before(); ?>
-   
-   
-   
-   
-    <?php roots_sidebar_after(); ?>
+
+
+
     </div><!-- /#content -->
   <?php roots_content_after(); ?>
 <?php get_footer(); ?>
