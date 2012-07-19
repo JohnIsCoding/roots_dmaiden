@@ -508,14 +508,14 @@
 		generatePagination: true, // boolean, Auto generate pagination
 		prependPagination: false, // boolean, prepend pagination
 		paginationClass: 'slides_pagination', // string, Class name for pagination
-		currentClass: 'current', // string, Class name for current class
+		currentClass: 'current_image', // string, Class name for current class
 		fadeSpeed: 350, // number, Set the speed of the fading animation in milliseconds
 		fadeEasing: '', // string, must load jQuery's easing plugin before http://gsgd.co.uk/sandbox/jquery/easing/
 		slideSpeed: 350, // number, Set the speed of the sliding animation in milliseconds
 		slideEasing: '', // string, must load jQuery's easing plugin before http://gsgd.co.uk/sandbox/jquery/easing/
 		start: 1, // number, Set the speed of the sliding animation in milliseconds
 		effect: 'slide', // string, '[next/prev], [pagination]', e.g. 'slide, fade' or simply 'fade' for both
-		crossfade: false, // boolean, Crossfade images in a image based slideshow
+		crossfade: true, // boolean, Crossfade images in a image based slideshow
 		randomize: false, // boolean, Set to true to randomize slides
 		play: 0, // number, Autoplay slideshow, a positive number will set to true and be the time between slide animation in milliseconds
 		pause: 0, // number, Pause slideshow on click of next/prev or pagination. A positive number will set to true and be the time of pause in milliseconds
