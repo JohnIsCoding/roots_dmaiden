@@ -13,8 +13,8 @@
 	   
 	   <div class="location">
 	    <ul class="tagline">
-      <li class="desc">Fine Art</li>
-      <li class="desc">Portraiture</li>
+      <li class="desc">London</li>
+      <li class="desc">Mombassa</li>
       </ul>
       </div>
 	   

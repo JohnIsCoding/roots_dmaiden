@@ -35,24 +35,20 @@ body.admin-bar .navbar-fixed-top { top: 28px; }
 }
 
 
-.navbar-inner ul.tagline {
+ul.tagline {
 	margin-top: 0px;
 	margin-left: 0px;
-	width: 300px;
-	float: left;
+	
+	float: none;
 }
 
-.navbar-inner ul.tagline > li{
+ul.tagline li{
 display: inline;
 padding-right: 8px;
   font-family: 'SortsMillGoudyItalic';
 }
 
-
-
-
-
-.navbar-inner ul.tagline > li:first-child:after{
+ul.tagline > li:first-child:after{
 	content: url('dot.png');
 	line-height: 33px;
 	padding-left: 8px;
