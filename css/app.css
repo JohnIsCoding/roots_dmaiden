@@ -38,25 +38,33 @@ body.admin-bar .navbar-fixed-top { top: 28px; }
 ul.tagline {
 	margin-top: 0px;
 	margin-left: 0px;
-	
+	min-height: 20px;
 	float: none;
+}
+
+.navbar-inner ul.tagline{
+	margin-top: 8px;
 }
 
 ul.tagline li{
 display: inline;
 padding-right: 8px;
   font-family: 'SortsMillGoudyItalic';
+  		line-height: 24px;
+
+  
 }
 
 ul.tagline > li:first-child:after{
 	content: url('dot.png');
-	line-height: 33px;
+	opacity: 0.5;
 	padding-left: 8px;
+	
 }
 
 .navbar .nav {
   float: right;
-  padding-bottom: 10px;
+  
 }
 
 
@@ -64,7 +72,6 @@ ul.tagline > li:first-child:after{
 .navbar i{
 	float: left;
 font-size: 18px;	
-margin-top: 7px;
 
 }
 
@@ -89,8 +96,7 @@ text-transform: uppercase;
   float: left;
   font-size: 13px;
   font-family: 'SortsMillGoudyRegular';
-  padding: 9px 10px 11px 10px;
-  line-height: 19px;
+  padding: 10px 10px 0px 10px;
   color: #999999;
   text-decoration: none;
   
@@ -102,7 +108,8 @@ text-transform: uppercase;
 
 .navbar .nav > li:after{
 	content: url('dot.png');
-	line-height: 33px;
+		opacity: 0.5;
+		line-height: 33px;
 }
 
 .navbar .nav > li:last-child:after{

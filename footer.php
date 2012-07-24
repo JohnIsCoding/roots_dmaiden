@@ -36,7 +36,7 @@
 	   
    </div> 
     
-    <div class="span4 offset3"> <p class="copy"><small>&copy; <span class="copydate"><?php echo date('Y'); ?></span> <?php bloginfo('name'); ?></small></p></div>
+    <div class="span2 offset5"> <p class="copy"><small>&copy; <span class="copydate"><?php echo date('Y'); ?></span> <?php bloginfo('name'); ?></small></p></div>
     
     </div>
     
